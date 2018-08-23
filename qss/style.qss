@@ -1,0 +1,32 @@
+QPushButton#pushButton_play{
+	border:none;
+    background:url(image/1.png) no-repeat;
+        }
+QPushButton#pushButton_play:hover{
+	border:none;
+    background:url(image/2.png) no-repeat;
+        }
+QPushButton#pushButton_nex{
+	border:none;
+    background:url(image/5.png) no-repeat;
+        }
+QPushButton#pushButton_nex:hover{
+	border:none;
+    background:url(image/6.png) no-repeat;
+        }
+QPushButton#pushButton_pre{
+	border:none;
+    background:url(image/7.png) no-repeat;
+        }
+QPushButton#pushButton_pre:hover{
+	border:none;
+    background:url(image/8.png) no-repeat;
+        }
+QPushButton#pushButton_vol{
+	border:none;
+    background:url(image/5.png) no-repeat;
+        }
+QPushButton#pushButton_vol:hover{
+	border:none;
+    background:url(image/14.png) no-repeat;
+        }
