@@ -18,8 +18,11 @@ def getKugou(word):
         hashs.append(jk['FileHash'])
 
     for hash in hashs:
+        print(hash)
         res = requests.get('https://www.kugou.com/yy/index.php?r=play/getdata&hash='+hash, headers=headers)
         jk = json.loads(res.text)
+        if jk['err_code'] != 0:
+            continue
         jk = jk['data']
         names.append(jk['audio_name']+' -From Kugou')
         imgs.append(jk['img'])
@@ -55,5 +58,3 @@ def getQQ(word):
         vkey = jm2['data']['items'][0]['vkey']
         srcs.append('http://dl.stream.qqmusic.qq.com/C400'+mids[n]+'.m4a?vkey='+vkey+'&guid=6612300644&uin=0&fromtag=66')
     return names,srcs,lrcs
-
-print(getKugou("远"))

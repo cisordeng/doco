@@ -74,9 +74,10 @@ class Get():
         words_w = [[] for i in range(len(names))]
         for n in range(len(names)):
             try:
-                lrcs = open(path+'/'+names[n]+'.lrc').readlines()
+                lrcs = open(path+'/'+names[n]+'.lrc', encoding='utf-8').readlines()
                 print(names[n]+'.lrc')
-            except:
+            except Exception as e:
+                print(e)
                 lrcs = ['[00:00.00]No find the song\'s lrc file in the path...']+[]
             for lrc in lrcs:
                 if lrc.find(']') != -1:
